@@ -1,0 +1,25 @@
+{
+  "name": "multipart-flexible",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/*.js"
+  },
+  "keywords": [
+    "multipart",
+    "request",
+    "http",
+    "streaming",
+    "stream"
+  ],
+  "author": "Hendrik Cech",
+  "license": "MIT",
+  "dependencies": {
+    "sandwich-stream": "0.0.4",
+    "inherits": "^2.0.1"
+  },
+  "devDependencies": {
+    "tape": "^2.12.3"
+  }
+}
