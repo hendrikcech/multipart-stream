@@ -14,12 +14,16 @@ module.exports = Multipart
  * @returns {function} Returns the multipart stream.
  */
 function Multipart(boundary) {
+	if(!this instanceof Multipart) {
+		return new Multipart(boundary)
+	}
+
 	this.boundary = boundary || Math.random().toString(36).slice(2)
 
 	Sandwich.call(this, {
 		head: '--' + this.boundary + CRNL,
-		tail: '--' + this.boundary + '--',
-		separator: CRNL + '--' + this.boundary + CRNL
+		tail: '--' + this.boundary + '--' + CRNL,
+		separator: '--' + this.boundary + CRNL
 	})
 }
 
@@ -46,7 +50,6 @@ Multipart.prototype.addPart = function(part) {
 	partStream.write(CRNL)
 
 	if(part.body instanceof stream.Stream) {
-		console.log('pipe it!')
 		part.body.pipe(partStream)
 	} else {
 		partStream.end(part.body)
