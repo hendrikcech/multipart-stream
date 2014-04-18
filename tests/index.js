@@ -7,7 +7,7 @@ var expected = fs.readFileSync(__dirname+'/expected.txt', { encoding: 'utf8' })
 test('works', function(t) {
 	t.plan(6)
 
-	var mp = new Multipart({ boundary: '{boundary}' })
+	var mp = new Multipart('{boundary}')
 
 	t.doesNotThrow(function() {
 		mp.addPart({
@@ -50,4 +50,15 @@ test('works', function(t) {
 		t.ok(data = data.toString(), 'end called after data was emitted')
 		t.equal(data, expected)
 	})
+})
+
+test('boundary', function(t) {
+	var mp = new Multipart('boundary')
+	t.equal(mp.boundary, 'boundary', 'mp.boundary exposed')
+	
+	var mp2 = new Multipart()
+	t.ok(mp2.boundary && typeof mp2.boundary === 'string',
+		'boundary automatically generated if not supplied')
+
+	t.end()
 })

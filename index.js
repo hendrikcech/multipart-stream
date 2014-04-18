@@ -13,11 +13,8 @@ module.exports = Multipart
  * @param {string} [opts.boundary] - The boundary to be used. If omitted one is generated.
  * @returns {function} Returns the multipart stream.
  */
-function Multipart(opts) {
-	opts = opts || {}
-	// Stream.PassThrough.call(this, opts)
-
-	this.boundary = opts.boundary || Math.random().toString(36).slice(2)
+function Multipart(boundary) {
+	this.boundary = boundary || Math.random().toString(36).slice(2)
 
 	Sandwich.call(this, {
 		head: '--' + this.boundary + CRNL,
