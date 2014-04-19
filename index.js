@@ -22,8 +22,8 @@ function Multipart(boundary) {
 
 	Sandwich.call(this, {
 		head: '--' + this.boundary + CRNL,
-		tail: '--' + this.boundary + '--' + CRNL,
-		separator: '--' + this.boundary + CRNL
+		tail: CRNL + '--' + this.boundary + '--',
+		separator: CRNL + '--' + this.boundary + CRNL
 	})
 }
 
