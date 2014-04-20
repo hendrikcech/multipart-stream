@@ -20,7 +20,7 @@ test('works', function(t) {
 	}, 'headers and string body')
 	
 	t.doesNotThrow(function() {
-		mp.addPart({
+		mp.add({
 			body: new Buffer('buffer')
 		})
 	}, 'no headers and buffer body')
@@ -29,7 +29,7 @@ test('works', function(t) {
 		var bodyStream = new PassThrough()
 		bodyStream.write('body!\n')
 		
-		mp.addPart({
+		mp.add({
 			headers: {
 				'body-type': 'stream'
 			},
@@ -40,7 +40,7 @@ test('works', function(t) {
 	}, 'one header and stream body')
 
 	t.doesNotThrow(function() {
-		mp.addPart()
+		mp.add()
 	}, 'empty part')
 
 	var data = ''

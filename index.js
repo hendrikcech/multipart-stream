@@ -25,6 +25,9 @@ function Multipart(boundary) {
 		tail: CRNL + '--' + this.boundary + '--',
 		separator: CRNL + '--' + this.boundary + CRNL
 	})
+
+	this._add = this.add
+	this.add = this.addPart
 }
 
 inherits(Multipart, Sandwich)
@@ -55,5 +58,5 @@ Multipart.prototype.addPart = function(part) {
 		partStream.end(part.body)
 	}
 
-	this.add(partStream)
+	this._add(partStream)
 }
