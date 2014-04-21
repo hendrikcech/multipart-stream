@@ -1,22 +1,22 @@
 {
-  "name": "multipart-flexible",
-  "version": "0.0.0",
-  "description": "",
+  "name": "multipart-stream",
+  "version": "1.0.0",
+  "description": "Simple streaming nodejs module to build http multipart bodies.",
   "main": "index.js",
   "scripts": {
     "test": "tape tests/*.js"
   },
   "keywords": [
     "multipart",
+    "stream",
     "request",
     "http",
-    "streaming",
-    "stream"
+    "streaming"
   ],
   "author": "Hendrik Cech",
   "license": "MIT",
   "dependencies": {
-    "sandwich-stream": "0.0.4",
+    "sandwich-stream": "^0.0.4",
     "inherits": "^2.0.1"
   },
   "devDependencies": {
