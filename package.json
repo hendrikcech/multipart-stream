@@ -1,10 +1,14 @@
 {
   "name": "multipart-stream",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Simple streaming nodejs module to build http multipart bodies.",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/hendrikcech/multipart-stream.git"
   },
   "keywords": [
     "multipart",
