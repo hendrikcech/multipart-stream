@@ -1,10 +1,10 @@
 {
   "name": "multipart-stream",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simple streaming nodejs module to build http multipart bodies.",
   "main": "index.js",
   "scripts": {
-    "test": "tape tests/*.js"
+    "test": "tape test/*.js"
   },
   "keywords": [
     "multipart",
@@ -21,5 +21,21 @@
   },
   "devDependencies": {
     "tape": "^2.12.3"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/17..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
   }
 }
