@@ -1,6 +1,8 @@
 # multipart-stream
 Simple streaming nodejs module to build http multipart bodies. Use [browserify](https://github.com/substack/browserify) to make it browser-compatible.
 
+[![testling badge](https://ci.testling.com/hendrikcech/multipart-stream.png)](https://ci.testling.com/hendrikcech/multipart-stream)
+
 ## install
 	npm install multipart-stream
 

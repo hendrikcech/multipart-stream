@@ -1,5 +1,5 @@
 var test = require('tape')
-var Multipart = require('..')
+var Multipart = require('../')
 var PassThrough = require('stream').PassThrough
 
 test('works', function(t) {
