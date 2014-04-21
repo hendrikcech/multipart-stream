@@ -1,11 +1,11 @@
 var test = require('tape')
 var Multipart = require('..')
 var PassThrough = require('stream').PassThrough
-var fs = require('fs')
-var expected = fs.readFileSync(__dirname+'/expected.txt', { encoding: 'utf8' })
 
 test('works', function(t) {
 	t.plan(6)
+
+	var expected = "--{boundary}\r\nSome-Header: I'm here!\r\nAnother-One: Me as well\r\n\r\nstring\r\n--{boundary}\r\n\r\nbuffer\r\n--{boundary}\r\nbody-type: stream\r\n\r\nbody!\nend.\r\n--{boundary}\r\n\r\n\r\n--{boundary}--"
 
 	var mp = new Multipart('{boundary}')
 

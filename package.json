@@ -20,11 +20,9 @@
     "inherits": "^2.0.1"
   },
   "devDependencies": {
-    "tape": "^2.12.3",
-    "brfs": "^1.1.1"
+    "tape": "^2.12.3"
   },
   "testling": {
-    "preprocess": "browserify -t brfs test/*.js",
     "files": "test/*.js",
     "browsers": [
       "ie/8..latest",
