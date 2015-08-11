@@ -62,3 +62,11 @@ test('boundary', function(t) {
 
 	t.end()
 })
+
+test('no error thrown if no streams are added', function(t) {
+	var mp = new Multipart()
+	t.doesNotThrow(function() {
+		mp.pipe(process.stdout)
+	})
+	t.end()
+})

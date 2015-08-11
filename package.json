@@ -1,6 +1,6 @@
 {
   "name": "multipart-stream",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Simple streaming nodejs module to build http multipart bodies.",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "Hendrik Cech",
   "license": "MIT",
   "dependencies": {
-    "sandwich-stream": "^0.0.4",
+    "sandwich-stream": "^1.0.0",
     "inherits": "^2.0.1"
   },
   "devDependencies": {
