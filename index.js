@@ -1,6 +1,7 @@
 var Sandwich = require('sandwich-stream').SandwichStream
 var stream = require('stream')
 var inherits = require('inherits')
+var isStream = require('is-stream')
 
 var CRNL = '\r\n'
 
@@ -52,7 +53,7 @@ Multipart.prototype.addPart = function(part) {
 
 	partStream.write(CRNL)
 
-	if(part.body instanceof stream.Stream) {
+	if(isStream(part.body)) {
 		part.body.pipe(partStream)
 	} else {
 		partStream.end(part.body)

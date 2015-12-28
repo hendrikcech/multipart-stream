@@ -6,9 +6,9 @@
   "scripts": {
     "test": "tape test/*.js"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/hendrikcech/multipart-stream.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/hendrikcech/multipart-stream.git"
   },
   "keywords": [
     "multipart",
@@ -20,8 +20,9 @@
   "author": "Hendrik Cech",
   "license": "MIT",
   "dependencies": {
-    "sandwich-stream": "^1.0.0",
-    "inherits": "^2.0.1"
+    "inherits": "^2.0.1",
+    "is-stream": "^1.0.1",
+    "sandwich-stream": "^1.0.0"
   },
   "devDependencies": {
     "tape": "^2.12.3"
